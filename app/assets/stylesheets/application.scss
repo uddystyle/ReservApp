@@ -2,39 +2,41 @@
 @import "bootstrap";
 @import "toastr";
 @import "dropzone/dropzone";
+@import "jquery-ui/datepicker";
+@import "jquery-bootstrap-datepicker";
 
 .jumbotron {
-    padding-top: 0px;
-    // 背景画像を暗くする
-    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05) ), url(norway-2742606_1920.jpg);
-	background-size: cover;
-	// 背景画像の位置を決める
-	background-position: 50% 50%;
-	height: 420px;
+  padding-top: 0;
+  // 背景画像を暗くする
+  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05) ), url("norway-2742606_1920.jpg");
+  background-size: cover;
+  // 背景画像の位置を決める
+  background-position: 50% 50%;
+  height: 420px;
 }
 
 .jumbotron .container .row {
-	margin-top: 100px;
-	color: #fff;
+  margin-top: 100px;
+  color: #fff;
 }
 
 .navbar-default {
-    background: transparent;
-    border-color: transparent;
-    z-index: 10;
+  background: transparent;
+  border-color: transparent;
+  z-index: 10;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: white;
-    font-size: 13px;
+  color: white;
+  font-size: 13px;
 }
 
 .navbar-default .navbar-brand {
-    color: white;
+  color: white;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .navbar-devise .navbar-nav > li > a {
@@ -45,27 +47,70 @@
 .navbar-devise .navbar-brand {
   color: #222222;
 }
-
 // トップページのnavbarのドロップダウンがクリックされた時
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
   background-color: transparent;
   color: #ffffff;
 }
-
 // navbar-device
+
 .navbar-devise {
   background: #ffffff;
   border-color: #ffffff;
   z-index: 10;
 }
-
 // facebook button
+
 .btn-facebook {
   color: #fff;
   background-color: #4c66a4;
 }
+// row-space類
 
+.row-space-top-0 {
+  margin-top: 0;
+}
+
+.row-space-top-1 {
+  margin-top: 10px;
+}
+
+.row-space-top-2 {
+  margin-top: 15px;
+}
+
+.row-space-top-3 {
+  margin-top: 20px;
+}
+
+.row-space-top-4 {
+  margin-top: 25px;
+}
+
+.row-space-0 {
+  margin-bottom: 0;
+}
+
+.row-space-1 {
+  margin-bottom: 10px;
+}
+
+.row-space-2 {
+  margin-bottom: 15px;
+}
+
+.row-space-3 {
+  margin-bottom: 20px;
+}
+
+.row-space-4 {
+  margin-bottom: 25px;
+}
 // プロフィール画像
+
 .profile-0 {
   width: 28px;
   height: 28px;
@@ -84,7 +129,6 @@
 .profile-full {
   width: 30%;
 }
-
 @media (min-width: 992px) {
   .profile-full {
     width: 100%;
@@ -122,22 +166,25 @@
   width: 1.25em;
   color: #00d1c1;
 }
-
 @media (min-width: 768px) {
   .sidebar-nav .navbar .navbar-collapse {
     padding: 0;
     max-height: none;
   }
+
   .sidebar-nav .navbar ul {
     float: none;
   }
+
   .sidebar-nav .navbar ul:not {
     display: block;
   }
+
   .sidebar-nav .navbar li {
     float: none;
     display: block;
   }
+
   .sidebar-nav .navbar li a {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -149,11 +196,11 @@
   font-size: 16px;
 }
 
-.sidebar-nav .navbar-default .navbar-nav > li{
+.sidebar-nav .navbar-default .navbar-nav > li {
   border-right: 1px solid #ddd;
   border-left: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: #fff
+  background-color: #fff;
 }
 
 .sidebar-nav .navbar-default .navbar-nav > li:first-child {
@@ -163,28 +210,175 @@
 .sidebar-nav .navbar-toggle {
   background-color: #337ab7;
 }
-
 // dropzone.jsのcss
-@media (max-width: 768px){
-  .dz-preview, .dz-processing, .dz-image-preview, .dz-error, .dz-complete {
-    margin: 10px 0!important;
+@media (max-width: 768px) {
+  .dz-complete,
+  .dz-error,
+  .dz-image-preview,
+  .dz-preview,
+  .dz-processing {
+    margin: 10px 0 !important;
     width: 100%;
   }
+
   .dropzone .dz-preview .dz-image {
     width: 100%;
   }
+
   .dropzone .dz-preview .dz-image img {
     height: 120px;
   }
 }
 
-.dropzone .dz-preview .dz-image img{
+.dropzone .dz-preview .dz-image img {
   width: 100%;
   height: 100%;
 }
 
 .dropzone.dz-started .dz-message {
   display: block;
+}
+
+// listings/indexのcss
+
+a.sidebar-item {
+  font-size: 16px;
+  color: #222;
+}
+
+.sidebar-list li.active {
+  font-weight: bold;
+}
+
+.ul-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+li.panel-body {
+  border-top: 1px solid #eeeeee;
+}
+
+li.panel-body:first-child {
+  border-top: none;
+}
+
+span.listing-title {
+  font-size: 18px;
+}
+
+.row-table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.col-middle {
+  vertical-align: middle;
+  display: table-cell;
+  float: none;
+}
+
+.panel-list-img {
+  height: 61px;
+}
+
+.panel-list-img img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .col-middle,
+  .row-table {
+    display: block;
+  }
+
+  .panel-list-img {
+    height: 170px;
+  }
+}
+// showページのcss
+
+.container-listing-show {
+  background-color: #fff;
+  border-bottom: 1px solid #dce0e0;
+}
+
+.panel-show {
+  border-radius: 0;
+  border: none;
+}
+
+.panel-show .panel-heading {
+  background-color: rgba(60,63,64,0.9);
+  color: #fff;
+  border-radius: 0;
+  border-bottom: 0;
+}
+
+.panel-show .panel-body {
+  border: 1px solid #eee;
+}
+
+.btn-wide {
+  width: 85%;
+}
+//showページのデスクトップcss
+@media (min-width: 992px) {
+  .panel-show {
+    position: inherit;
+    width: 296px;
+    z-index: 100;
+    margin-top: -62px;
+  }
+}
+
+// showページの近いリスティングのcss
+.panel-listing img {
+  width: 100%;
+  height: 180px;
+}
+
+//showページのデスクトップcss
+@media (min-width: 992px){
+  .panel-listing img {
+  height: 160px;
+  }
+}
+
+.price-card {
+    background: rgba(60,63,64,0.9);
+    color: #fff;
+    position: absolute;
+    bottom: 125px;
+    padding: 7px 10px;
+}
+
+// カレンダー用
+.class-holiday {
+  background: #337ab7 !important;
+  color: #fff !important;
+}
+
+.class-holiday > .ui-state-default {
+  background: #337ab7 !important;
+  color: #fff !important;
+}
+
+.calendar .ui-datepicker {
+  width: 100%;
+}
+
+.calendar .ui-datepicker .ui-datepicker-current-day {
+  background-color: #fff;
+}
+
+#datepicker .ui-datepicker .ui-datepicker-current-day a{
+  color: #222;
+}
+
+a {
+  color: #222;
 }
 
 body {

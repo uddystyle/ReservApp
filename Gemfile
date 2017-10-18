@@ -4,6 +4,7 @@ gem 'rails', '4.2.6'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
+gem 'sprockets'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
@@ -17,6 +18,9 @@ gem 'paperclip', '~> 5.0.0'
 gem 'dropzonejs-rails'
 gem "figaro", '~> 1.1.0'
 gem 'aws-sdk', '~> 2.3'
+gem 'geocoder'
+gem 'jquery-ui-rails'
+gem 'jquery-turbolinks'
 
 group :development, :test do
   gem 'sqlite3'
